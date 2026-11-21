@@ -1,0 +1,65 @@
+chat.html
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>HAZMOB Game Chat</title>
+<style>
+body {
+  background: #090d16;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+h1 { color: #ff3030; }
+.chat {
+  max-width: 500px;
+  margin: 30px auto;
+  background: #182235;
+  padding: 20px;
+  border-radius: 12px;
+}
+#messages {
+  height: 250px;
+  overflow-y: auto;
+  background: #080b12;
+  padding: 10px;
+  text-align: left;
+}
+input {
+  padding: 12px;
+  width: 65%;
+  margin-top: 15px;
+}
+button {
+  padding: 12px;
+  background: #ed2020;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>HAZMOB GAME CHAT</h1>
+<div class="chat">
+<div id="messages">
+<p>Welcome to HAZMOB Chat!</p>
+</div>
+<input id="msg" placeholder="Write your message">
+<button onclick="sendMessage()">SEND</button>
+</div>
+<script>
+function sendMessage() {
+ let input = document.getElementById("msg");
+ let message = input.value.trim();
+ if (message === "") return;
+ let p = document.createElement("p");
+ p.textContent = "Player: " + message;
+ document.getElementById("messages").appendChild(p);
+ input.value = "";
+}
+</script>
+</body>
+</html>
+```
