@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome | My Website</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;min-height:100vh;color:#fff;background:linear-gradient(135deg,#0f172a,#1e3a8a,#6d28d9);}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 8%;flex-wrap:wrap;gap:16px}
+.logo{font-weight:800;font-size:1.4rem;letter-spacing:1px}
+nav a{color:white;text-decoration:none;margin-left:22px;opacity:.85}nav a:hover{opacity:1}
+.hero{min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:50px 20px}
+.content{max-width:760px}.tag{display:inline-block;border:1px solid #ffffff55;border-radius:30px;padding:10px 18px;background:#ffffff12;margin-bottom:24px}
+h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.08;margin-bottom:22px}h1 span{color:#a5b4fc}
+p{font-size:1.15rem;line-height:1.7;color:#e0e7ff;margin-bottom:30px}
+.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+button{padding:14px 22px;border-radius:12px;border:0;font-size:1rem;font-weight:bold;cursor:pointer;transition:.2s}
+.primary{background:#fff;color:#312e81}.secondary{background:#ffffff20;color:white;border:1px solid #ffffff55}button:hover{transform:translateY(-3px)}
+footer{text-align:center;padding:20px;color:#c7d2fe;font-size:.9rem}
+</style>
+</head>
+<body>
+<nav><div class="logo">MY WEBSITE</div><div><a href="#home">Home</a><a href="#about">About</a></div></nav>
+<main class="hero" id="home"><div class="content"><div class="tag">✨ My first website</div><h1>Hello, welcome to <span>my website!</span></h1><p>I am learning how to build websites. This is my first page, and I am excited to create something amazing.</p><div class="buttons"><button class="primary" onclick="welcome()">Click me</button><button class="secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn more</button></div></div></main>
+<section id="about" style="text-align:center;padding:30px 20px 60px"><h2>About this page</h2><p style="margin:12px auto 0;max-width:600px">Made with HTML and CSS. More exciting things coming soon!</p></section>
+<footer>Made with ❤️ while learning web development</footer>
+<script>function welcome(){alert('Thanks for visiting my website! 😊')}</script>
+</body>
+</html>
